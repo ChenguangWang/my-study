@@ -6,7 +6,7 @@ import { G6Component } from './g6.component';
 @NgModule({
     imports: [
         CommonModule,
-        G6RoutingModule
+        G6RoutingModule,
     ],
     declarations: [
         G6Component

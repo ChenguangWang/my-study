@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class G6Component implements OnInit {
 
-    constructor() { }
+    constructor() {
+        
+    }
 
     ngOnInit() {
+        
     }
 
 }
