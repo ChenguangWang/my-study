@@ -18,6 +18,10 @@ const appRoutes: Routes = [
         loadChildren: './g6/g6.module#G6Module'
     },
 
+    {
+        path: 'dynamic-load',
+        loadChildren: './dynamic-load/dynamic-load.module#DynamicLoadModule'
+    }
     
 ];
 
