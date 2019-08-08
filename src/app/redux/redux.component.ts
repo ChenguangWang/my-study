@@ -12,7 +12,19 @@ export class ReduxComponent implements OnInit {
   constructor(public store: Store<any>) {
     this.counter$ = store.select("counter");
     console.log("this.counter$ ====>>>", this.counter$);
+
+    this.counter$.subscribe(date => {
+      console.log("subscribe===>>>", date);
+    });
   }
 
   ngOnInit() {}
+
+  plus() {
+    this.counter$.dispatch({ type: "plus", num: 1 });
+  }
+
+  minus() {
+    this.counter$.dispatch({ type: "minus", num: 2 });
+  }
 }
