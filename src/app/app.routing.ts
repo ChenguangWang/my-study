@@ -24,6 +24,10 @@ const appRoutes: Routes = [
   {
     path: "redux",
     loadChildren: "./redux/redux.module#ReduxModule"
+  },
+  {
+    path: "testContent",
+    loadChildren: "./test-content/test-content.module#TestContentModule"
   }
 ];
 
