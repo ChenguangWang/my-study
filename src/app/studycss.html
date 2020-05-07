@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MyAngular</title>
+  </head>
+  <body>
+    <button>test</button>
+    <div class="text">账户</div>
+    <div class="text">密码设置</div>
+    <div class="text">手机号</div>
+  </body>
+</html>
+<script>
+  /*
+  function clone(target, map = new WeakMap()) {
+    if (typeof target === "object") {
+      let cloneObj = Array.isArray(target) ? [] : {};
+      if (map.get(target)) {
+        return map.get(target);
+      }
+      map.set(target, cloneObj);
+      for (let key in target) {
+        cloneObj[key] = clone(target[key], map);
+      }
+      return cloneObj;
+    } else {
+      return target;
+    }
+  }
+  const target = {
+    field1: 1,
+    field2: undefined,
+    field3: {
+      child: "child"
+    },
+    field4: [2, 4, 8]
+  };
+  target.target = target;
+  let json = clone(target);
+  console.log("====>>", json);
+  */
+  let a = [3, 1, 6, 5, 7, 2, 4];
+  function quickSort(arr) {
+    if (arr.length < 2) {
+      return arr;
+    }
+    let len = arr.length - 1,
+      leftArr = [],
+      rightArr = [];
+    let limitValue = arr[len];
+    for (let i = 0; i < len; i++) {
+      if (arr[i] <= limitValue) {
+        leftArr.push(arr[i]);
+      } else {
+        rightArr.push(arr[i]);
+      }
+    }
+    return [...quickSort(leftArr), limitValue, ...quickSort(rightArr)];
+  }
+  let b = quickSort(a);
+  console.log(b);
+</script>
+<style>
+  button {
+    all: unset;
+  }
+  .text {
+    width: 100px;
+    padding: 0 10px;
+    background: pink;
+    margin-bottom: 10px;
+    text-align-last: justify;
+  }
+</style>
